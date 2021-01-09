@@ -3,7 +3,7 @@ class CLI
   def start
     puts "Welcome to the film Lot, shop for a new film?"
     puts "Let's start with your name, please enter your name:"
-    # API.get_data
+    #API.get_data
     # binding.pry
     greet(user_input)
   end
@@ -19,8 +19,8 @@ class CLI
   end
 
   def films_list
-    ["film1", "film2", "film3"].each.each_with_index(1) do |film,i|
-      puts "#{i}. #{film}"
+    ["film1", "film2", "film3"].each_with_index do |film, i|
+      puts "#{i+1}. #{film}"
     end
     film_selection
   end
@@ -62,7 +62,7 @@ class CLI
       menu
     elsif selection == 'exit'
       goodbye
-    else 
+    else
       invalid
     end
   end

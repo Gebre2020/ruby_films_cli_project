@@ -19,4 +19,13 @@ class Film
     @@all
   end
 
+  # a method that accepts the films name, and finds the object
+  # with that title 
+
+  def self.find_film(film_title)
+    self.all.find do |film|
+      film.title == film_title
+    end
+  end
+
 end
