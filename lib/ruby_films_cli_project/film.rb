@@ -9,7 +9,7 @@ class Film
     @director = director
     @producer = producer
     save
-    end 
+  end 
 
   def save
     @@all << self
