@@ -19,7 +19,7 @@ class CLI
   end
 
   def films_list
-    Film.each_with_index(1) do |film, i|
+    Film.all.each.with_index(1) do |film, i|
       puts "#{i}. #{film.title}"
     end
     film_selection

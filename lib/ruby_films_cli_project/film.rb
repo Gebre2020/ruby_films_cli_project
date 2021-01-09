@@ -4,12 +4,21 @@ class Film
 
   attr_accessor :title, :director, :producer
 
-  def initialize(title, director, producer)
-    @title = title
-    @director = director
-    @producer = producer
+#   def initialize(title, director, producer)
+#     @title = title
+#     @director = director
+#     @producer = producer
+#     save
+#   endexit
+
+
+  # using meta programming method
+  def initialize(film_hash)
+    film_hash.each do |k, v|
+      self.send("#{k}=", v) if self.respond_to?("#{k}=")
+    end
     save
-  end 
+  end
 
   def save
     @@all << self
