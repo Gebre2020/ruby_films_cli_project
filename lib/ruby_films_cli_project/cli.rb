@@ -18,6 +18,31 @@ class CLI
     menu
   end
 
+  def films_list
+    ["film1", "film2", "film3"].each.each_with_index(1) do |film,i|
+      puts "#{i}. #{film}"
+    end
+    film_selection
+  end
+
+  def goodbye
+    puts "Hopefully you'll come back! Have a nice day!"
+  end
+
+  def invalid
+    puts "The input doesn't seem valid input, try again!"
+    menu
+  end
+
+  def film_selection
+    puts "Select a film for more detail"
+    selection = user_input
+    # puts "#{selection}"
+    film = Film.find_film(selection)
+    film_details(film)
+    # we'll query our Film class to find the films detail
+  end
+
   # based on eser selection, either show a list of films,
   # give them an error message, or exit
 
@@ -25,7 +50,7 @@ class CLI
     selection = user_input
     if selection == 'y'
       films_list
-      menu 
+      menu
     elsif selection == 'exit'
       goodbye
     else 
