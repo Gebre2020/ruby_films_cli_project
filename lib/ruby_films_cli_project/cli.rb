@@ -3,7 +3,7 @@ class CLI
   def start
     puts "Welcome to the film Lot, shop for a new film?"
     puts "Let's start with your name, please enter your name:"
-    API.get_data
+    # API.get_data
     # binding.pry
     greet(user_input)
   end
@@ -41,6 +41,15 @@ class CLI
     film = Film.find_film(selection)
     film_details(film)
     # we'll query our Film class to find the films detail
+  end
+
+  def film_details(film)
+    puts "Title: #{film.title}"
+    puts "Director: #{film.director}"
+    puts "Producer: #{film.producer}"
+    puts "To see the list again enter 'y' or 'exit' to leave the lot!"
+    puts ""
+    menu
   end
 
   # based on eser selection, either show a list of films,
