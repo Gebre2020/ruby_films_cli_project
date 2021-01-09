@@ -10,3 +10,5 @@
 - CLI - controller - what communicate with the user
 - Film - where objects are created and stored for user display 
 - Api - bring external data using url, consume api here, instantiate my objects 
+
+-URL: https://gebre2020.github.io/ruby_films_cli_project/
