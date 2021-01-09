@@ -1,0 +1,12 @@
+- build a cli class
+- welcome the user and enter user name
+- prompt the user either to select a list, or to exit
+- if the user select a list, print the list of films
+- and the film detail
+
+- if the user select exit, print goodby message and exit from the program
+
+- 3 classes to build
+- CLI - controller - what communicate with the user
+- Film - where objects are created and stored for user display 
+- Api - bring external data using url, consume api here, instantiate my objects 
