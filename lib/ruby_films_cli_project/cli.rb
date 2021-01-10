@@ -25,6 +25,7 @@ class CLI
   # print out the list of all films
   def films_list
     Film.all.each.with_index(1) do |film, i|
+      puts ""
       puts "#{i}. #{film.title}"
     end
     film_selection
@@ -68,7 +69,8 @@ class CLI
   end
 
   # based on eser selection, either show a list of films,
-  # give them an error message, or exit
+  # give them an error message, or 
+  # exit
 
   def menu
     selection = user_input

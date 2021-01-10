@@ -8,10 +8,11 @@ class Film
 #     @title = title
 #     @director = director
 #     @producer = producer
+#     @release_date = release_date
 #     save
-#   endexit
+#   end
 
-
+  # film_hash is the attributes
   # using meta programming method
   def initialize(film_hash)
     film_hash.each do |k, v|
