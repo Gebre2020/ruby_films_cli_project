@@ -30,11 +30,12 @@ class Film
   end
 
   # a method that accepts the films name, and finds the object
-  # with that title 
+  # with that title
+  # class method 
 
-  def self.find_film(film_title)
+  def self.find_film(selected_film)
     self.all.find do |film|
-      film.title == film_title
+      film.title == selected_film
     end
   end
 

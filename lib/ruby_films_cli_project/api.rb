@@ -11,6 +11,6 @@ class API
       Film.new(film)
     end
     # binding.pry
-    end
+  end
 
 end
